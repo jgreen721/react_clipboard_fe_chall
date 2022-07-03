@@ -1,38 +1,324 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+:root {
+  --cyan: hsl(171, 66%, 44%);
+  --lightblue: hsl(233, 100%, 69%);
+  --dargrayblue: hsl(210, 10%, 33%);
+  --grayblue: hsl(201, 11%, 66%);
+}
+
+.btn-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.5em;
+  width: 125px;
+  border-radius: 100px;
+  margin: 0px 0.5em;
+  box-shadow: 1px 2px 7px gray;
+  border: none;
+  cursor: pointer;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 85%;
+  box-shadow: 2px 3px 8px gray;
+}
+
+.mac-btn {
+  background: var(--lightblue);
+}
+
+.ios-btn {
+  background: var(--cyan);
+}
+
+.header {
+  height: 400px;
+  /* border: 1px solid black; */
+  position: relative;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header-content {
+  height: 80%;
+  width: 100%;
+  transform: translateY(15%);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-logo {
+  margin-bottom: 1.5em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header-h1,
+.header-p {
+  text-align: center;
+  width: clamp(60%, 500px, 85%);
+  /* border: 2px solid black; */
+  margin: 0 auto;
+  margin-bottom: 1.5em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* TOP-SECTION */
+
+.top-section-parent {
+  overflow: hidden;
+}
+
+.top-section-top-row {
+  text-align: center;
+  padding: 1em;
+}
+
+.top-section-bottom-row {
   display: flex;
-  flex-direction: column;
+}
+
+.top-section-bottom-col:first-child {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.top-section-bottom-col {
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bottom-col-content {
+  padding: 1em;
+}
+
+.computer-img {
+  height: 300px;
+  width: 85%;
+}
+
+/* Middle Section (Devices) */
+
+.middle-section {
+  padding: 2em;
+  width: 100%;
+  /* padding: 2em; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  /* height: 500px; */
+  /* border: 5px solid black; */
+}
+
+.middle-section-header {
+  /* margin-bottom: 25px; */
+  text-align: center;
+  /* border: 2px solid green; */
+  position: relative;
+  width: 75%;
+  padding: 2em;
+  /* height: 100px; */
+}
+
+.middle-section-header h5 {
+  /* margin: 1rem 0; */
+  position: absolute;
+  left: 13%;
+  width: 75%;
+  margin-top: 0.75rem;
+}
+
+.devices-img {
+  width: clamp(65%, 500px, 90%);
+  height: 80%;
+  /* border: 2px solid red; */
+  /* margin: 1em; */
+  transform: translateY(2em);
+}
+
+/*workflow-container */
+
+.workflow-container {
+  padding: 1em;
+  /* height: 300px; */
+  /* border: 2px solid red; */
+}
+
+.workflow-header {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.workflow-row {
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.work-item {
+  width: 30%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.work-item h3 {
+  margin: 0.5em 0;
+}
+
+.work-item p {
+  margin: 0.5em 0;
+}
+
+/* LOGO-ROW */
+
+.logo-row {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*BOTTOM-SECTION */
+
+.bottom-section {
+  text-align: center;
+  padding: 4em;
+}
+
+/* .bottom-section h1 {
+  margin: 0.25em;
+} */
+
+.bottom-section p {
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5em;
+  background: lightgray;
+}
+
+.footer-logo {
+  height: 50px;
+  width: 50px;
+  margin: 0.5em;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.link-item {
+  list-style: none;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.link-item:hover {
+  color: teal;
+}
+
+.footer-icons {
+  display: flex;
+}
+
+.icon-item {
+  margin: 0.5em;
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    height: 600px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-content {
+    transform: translateY(8%);
+  }
+
+  .middle-section {
+    height: 500px;
+  }
+
+  .devices-img {
+    height: 50%;
+    width: 100%;
+    transform: translateY(3.5rem);
+  }
+  .top-section-bottom-col {
+    width: 100%;
+    text-align: center;
+  }
+  .top-section-bottom-row {
+    flex-direction: column;
+  }
+
+  .workflow-row,
+  .btn-row,
+  .footer {
+    flex-direction: column;
+  }
+
+  .btn {
+    margin: 1em 0;
+    width: 85%;
+    cursor: pointer;
+  }
+
+  .work-item {
+    width: 100%;
+  }
+
+  .logo-icon {
+    margin: 1.5rem 0;
+  }
+
+  .logo-row {
+    flex-direction: column;
+  }
+
+  .footer {
+    padding: 2em;
+  }
+
+  .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .footer-icons {
+    transform: translateY(1em);
   }
 }
